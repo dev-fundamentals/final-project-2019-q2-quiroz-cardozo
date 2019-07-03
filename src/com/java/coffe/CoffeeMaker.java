@@ -1,17 +1,21 @@
 package com.java.coffe;
 
-public class CoffeMaker {
+public class CoffeeMaker {
     private Boiler boiler;
 
-    public CoffeMaker() {
+    public CoffeeMaker() {
         boiler = new Boiler();
     }
 
-    public void putCups(int numCups) {
+    public void putWaterGlasses(int numCups) {
         boiler.setCups(numCups);
     }
 
     public void pressBrewButton() {
-        
+        if (!boiler.isEmpty()) {}
+    }
+
+    public void brewCoffee(int numOfCoffeeCups) {
+
     }
 }
