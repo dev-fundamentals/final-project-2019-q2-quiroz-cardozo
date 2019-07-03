@@ -5,6 +5,10 @@ public class Pot extends Container {
     private String potEmpty;
     private String potNotEmpty;
 
+    public Pot(int cup) {
+        super(cup);
+    }
+
     public String getWarmerEmpty() {
         return warmerEmpty;
     }
