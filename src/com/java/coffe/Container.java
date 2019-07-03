@@ -2,17 +2,30 @@ package com.java.coffe;
 
 public class Container {
     private final int limit = 12;
-    protected int cup;
+    protected int cups;
 
     public Container(int cup) {
-        this.cup = cup;
+        putCups(cup);
     }
 
     public int getCup() {
-        return cup;
+        return cups;
     }
 
     public void addCup(int quantity){
-        this.cup += quantity;
+        putCups(quantity + cups);
+    }
+
+    /**
+     * Method that set the capacity of cups.
+     *
+     * @param quantity
+     */
+    public void putCups(int quantity) {
+        if (quantity > limit) {
+            throw new IllegalArgumentException("The capacity is only " + limit +  " cups.");
+        } else {
+            this.cups = quantity;
+        }
     }
 }
