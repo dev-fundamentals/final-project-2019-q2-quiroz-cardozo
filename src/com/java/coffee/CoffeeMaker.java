@@ -1,4 +1,4 @@
-package com.java.coffe;
+package com.java.coffee;
 
 public class CoffeeMaker {
     private Boiler boiler;
@@ -9,6 +9,10 @@ public class CoffeeMaker {
 
     public void putWaterGlasses(int numCups) {
         boiler.setCups(numCups);
+    }
+
+    public void putCoffeeGrounds() {
+
     }
 
     public void pressBrewButton() {
