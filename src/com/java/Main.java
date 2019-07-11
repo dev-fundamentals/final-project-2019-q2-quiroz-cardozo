@@ -14,13 +14,20 @@ public class Main {
 //        coffeeMaker.pressBrewButton();
 
         int option = showMenu();
+        String message;
+        int quantity;
 
         do {
             switch (option) {
                 case 1:
-//                    coffeeMaker
+                    message = "How many coffee beans do you want to put in?";
+                    quantity = enterAChoice(message);
+                    coffeeMaker.putCoffeeGrounds(quantity);
                     break;
                 case 2:
+                    message = "How many glasses of water do you want to place?";
+                    quantity = enterAChoice(message);
+                    coffeeMaker.putWaterGlasses(quantity);
                     break;
                 case 3:
                     break;
@@ -28,7 +35,7 @@ public class Main {
                     exit(0);
                     break;
                 default:
-                    System.out.println("Sorry, please enter valid Option");
+                    System.out.println("Sorry, please enter a valid Option");
                     showMenu();
                     break;
             }
@@ -52,5 +59,12 @@ public class Main {
 
         return option;
 
+    }
+
+    private static int enterAChoice(String message) {
+        System.out.println(message);
+        Scanner scanner = new Scanner(System.in);
+
+        return scanner.nextInt();
     }
 }
