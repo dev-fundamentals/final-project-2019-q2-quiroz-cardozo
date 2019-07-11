@@ -1,4 +1,4 @@
-package com.java.coffe;
+package com.java.coffee;
 
 public class Pot extends Container {
     private String warmerEmpty;
